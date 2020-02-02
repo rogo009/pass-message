@@ -1,7 +1,18 @@
 .box {
     border: 1px solid black;
+    height: 300px;
 }
 
 input {
     border: 1px solid lightgrey;
+}
+
+.errorStyle {
+    display: block;
+    color: red;
+    border: 1px solid blue;
+}
+
+.errorDisplay {
+    display: none;
 }

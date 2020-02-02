@@ -7,32 +7,27 @@ let error = document.getElementById('error');
 
 // handler
 
-button.addEventListener('click', yuck);
+button.addEventListener('click', isEmpty);
 
 // function
 
-function yuck() {
-    isEmpty();
-    message();
-}
-
 function isEmpty() {
     if (input.value === "") {
-        error.textContent = "Please type a message in the input field";
+        error.textContent = "Please provide a message"; //use JS to add message to error div
+        error.classList.add('errorStyle'); // wanted to practice dynamic styling with JS instead of assigning class name to the error div then display if meets condition
         setTimeout(function() {
-            error.style.display = "none";
-        }, 4000);
+            error.classList.remove('errorStyle');
+            error.classList.add('errorDisplay'); // not necessary but adding dynamic styling class into CSS - this actually requires more lines of code, since you have to add a CSS class to make the div disappear, vs making style display none as below
+            // error.style.display = "none";
+        }, 3000);
+    } else {
+    lastMessage.textContent = input.value;
+    input.value = "";
     }
 }
 
-
-
-function message() {
-    console.log(input.value);
-    lastMessage.textContent = input.value;
-    input.value = "";
-}
-
-// setTimeout(function(){
-//     error.textContent = "Error";
-// }, 2000);
+// function message() {
+//     console.log(input.value);
+//     lastMessage.textContent = input.value;
+//     input.value = "";
+// }
