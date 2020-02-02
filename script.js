@@ -14,6 +14,7 @@ button.addEventListener('click', isEmpty);
 function isEmpty() {
     if (input.value === "") {
         error.textContent = "Please provide a message"; //use JS to add message to error div
+        error.classList.remove('errorDisplay');
         error.classList.add('errorStyle'); // wanted to practice dynamic styling with JS instead of assigning class name to the error div then display if meets condition
         setTimeout(function() {
             error.classList.remove('errorStyle');
