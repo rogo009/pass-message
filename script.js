@@ -17,7 +17,6 @@ function isEmpty() {
         error.classList.remove('errorDisplay');
         error.classList.add('errorStyle'); // wanted to practice dynamic styling with JS instead of assigning class name to the error div then display if meets condition
         setTimeout(function() {
-            error.classList.remove('errorStyle');
             error.classList.add('errorDisplay'); // not necessary but adding dynamic styling class into CSS - this actually requires more lines of code, since you have to add a CSS class to make the div disappear, vs making style display none as below
             // error.style.display = "none";
         }, 3000);

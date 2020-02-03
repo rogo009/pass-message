@@ -1,16 +1,52 @@
+body {
+    background-color: lightskyblue;
+    font-family: 'Playfair Display', serif;;
+}
+
 .box {
+    text-align: center;
     border: 1px solid black;
     height: 300px;
+    width: 450px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 input {
     border: 1px solid lightgrey;
+    padding: 5px 0px;
+    width: 400px;
+}
+
+button {
+    font-size: .8em;
+    padding: 5px 0px;
+    border-radius: 2px;
+    background-color: #ccc;
+    border: none;
+    outline: none;
+    color: white;
+    transition: background-color .5s;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 75px;
+    margin: 10px 0px;
+}
+
+button:hover {
+    opacity: 90%;
+    color: black;
 }
 
 .errorStyle {
     display: block;
     color: red;
-    border: 1px solid blue;
+    margin: 10px 30px;
+    padding: 10px 0px;
+    background-color: lightpink;
 }
 
 .errorDisplay {
