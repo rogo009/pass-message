@@ -1,13 +1,12 @@
 // variables
 
 let input = document.querySelector('input');
-const button = document.querySelector('button');
+const button = document.querySelector('button').addEventListener('click', isEmpty);
 let lastMessage = document.getElementById('lastMessage');
 let error = document.getElementById('error');
 
-// handler
+// handler - see above attached handler to variable
 
-button.addEventListener('click', isEmpty);
 
 // function
 
